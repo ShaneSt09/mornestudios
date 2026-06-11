@@ -1356,16 +1356,23 @@ h3 {
     border-radius: 1.2rem;
     background: rgba(2, 8, 18, 0.92);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.34);
+    max-height: 0;
     opacity: 0;
+    overflow: hidden;
     pointer-events: none;
-    transform: translateY(-0.5rem);
-    transition: opacity 180ms ease, transform 180ms ease;
+    transform: translateY(-0.65rem) scale(0.98);
+    transform-origin: top center;
+    transition:
+      max-height 260ms ease,
+      opacity 180ms ease,
+      transform 220ms ease;
   }
 
   .nav-links.is-open {
+    max-height: 18rem;
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   .nav-links a {
