@@ -20,6 +20,7 @@ revealItems.forEach((item, index) => {
 });
 
 const topButton = document.querySelector("[data-scroll-top]");
+const backToTopButton = document.querySelector("[data-back-to-top]");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 
@@ -28,13 +29,20 @@ const closeNav = () => {
   navLinks?.classList.remove("is-open");
 };
 
-topButton?.addEventListener("click", () => {
+const scrollToTop = () => {
   closeNav();
 
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
+};
+
+topButton?.addEventListener("click", scrollToTop);
+backToTopButton?.addEventListener("click", scrollToTop);
+
+window.addEventListener("scroll", () => {
+  backToTopButton?.classList.toggle("is-visible", window.scrollY > 520);
 });
 
 navToggle?.addEventListener("click", () => {
