@@ -8,10 +8,9 @@ The site is plain HTML/CSS/JS served as static assets by Cloudflare Workers
 
 1. Sign in at dash.cloudflare.com (free plan is enough).
 2. **Workers & Pages → Create → Import a repository**, pick this site's GitHub repository.
-   If a Worker called `portfolio` already exists from earlier, open it and connect
-   the repo under **Settings → Build** instead of creating a new one.
+   Name the project `mornestudio`: it must match `name` in `wrangler.jsonc`.
 3. Build settings: leave the build command empty; deploy command `npx wrangler deploy`.
-4. Deploy. The site is live at `https://portfolio.<your-account>.workers.dev`.
+4. Deploy. The site is live at `https://mornestudio.<your-account>.workers.dev`.
    Every push to `main` redeploys automatically.
 
 ## 2. Buy and connect the domain
