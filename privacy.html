@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy | Morne Studio</title>
+    <meta name="description" content="How Morne Studio handles your information." />
+    <link rel="canonical" href="https://shanest09.github.io/mornestudio/privacy" />
+    <meta name="theme-color" content="#14231c" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <script>
+      document.documentElement.classList.add('js');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K3K91RL9Q9');
+
+      // Load Google Analytics on the first scroll/tap, or 3s after load; events before then are queued
+      (() => {
+        let loaded = false;
+        const loadGa = () => {
+          if (loaded) return;
+          loaded = true;
+          const ga = document.createElement('script');
+          ga.async = true;
+          ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-K3K91RL9Q9';
+          document.head.appendChild(ga);
+        };
+        ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach((type) =>
+          window.addEventListener(type, loadGa, { once: true, passive: true }),
+        );
+        window.addEventListener('load', () => setTimeout(loadGa, 3000));
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="wrap header-inner">
+        <a class="brand" href="index.html" aria-label="Morne Studio home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M4 38L18 16L30 38H4Z" fill="currentColor" opacity=".45" />
+            <path d="M14 38L31 10L45 38H14Z" fill="currentColor" />
+            <path d="M31 10L36 38H45L31 10Z" fill="var(--accent)" />
+          </svg>
+          <span>Morne Studio</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav class="nav" id="mainNav" aria-label="Main">
+          <a href="index.html#work">Work</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#packages">Packages</a>
+          <a href="index.html#process">Process</a>
+          <a href="index.html#faq">FAQ</a>
+          <a class="button button-small" href="index.html#contact">Free website review</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="simple-page">
+        <div class="wrap simple-inner prose">
+          <p class="eyebrow">Privacy</p>
+          <h1>Privacy notice</h1>
+          <p class="lede">Last updated 16 October 2026. Short version: I only collect what I need to answer you, and I never sell it.</p>
+
+          <h2>Who I am</h2>
+          <p>
+            This website belongs to Morne Studio, run by Shane St. Louis in the Commonwealth of Dominica.
+            For any privacy question, email <a href="mailto:shane.st.louis@hotmail.com">shane.st.louis@hotmail.com</a>.
+          </p>
+
+          <h2>What I collect</h2>
+          <ul>
+            <li><b>When you use the contact form:</b> your name, email, business name, current website, the service you're interested in and your message.</li>
+            <li><b>When you message me on WhatsApp or by email:</b> whatever you choose to send.</li>
+            <li><b>When you browse the site:</b> anonymous usage statistics through Google Analytics, such as pages visited, rough location (country or city), device type and how you found the site. This uses cookies.</li>
+          </ul>
+
+          <h2>How I use it</h2>
+          <ul>
+            <li>To reply to your enquiry, prepare a website review or quote, and carry out work you ask for.</li>
+            <li>To understand which parts of this site are useful, so I can improve it.</li>
+          </ul>
+          <p>I don't sell your information, add you to a mailing list without asking, or share it with anyone except the services below.</p>
+
+          <h2>Services that handle your data</h2>
+          <ul>
+            <li><b>FormSubmit</b> delivers contact form messages to my email.</li>
+            <li><b>Google Analytics</b> measures site usage.</li>
+            <li><b>Cloudflare</b> hosts this website.</li>
+            <li><b>Microsoft (Outlook)</b> and <b>WhatsApp</b>, if you contact me there.</li>
+          </ul>
+
+          <h2>How long I keep it</h2>
+          <p>
+            Enquiries that don't become projects are deleted within 12 months. Client records are kept as long as
+            needed for the project and for tax and accounting purposes.
+          </p>
+
+          <h2>Your choices</h2>
+          <ul>
+            <li>Ask to see, correct or delete the information I hold about you by emailing me.</li>
+            <li>Block or delete cookies in your browser settings, or use Google's <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer">Analytics opt-out add-on</a>.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand brand-footer" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M4 38L18 16L30 38H4Z" fill="currentColor" opacity=".45" />
+            <path d="M14 38L31 10L45 38H14Z" fill="currentColor" />
+            <path d="M31 10L36 38H45L31 10Z" fill="var(--accent)" />
+          </svg>
+          <span>Morne Studio</span>
+        </a>
+        <p>Website creation &amp; restoration by Shane St. Louis. Built in Dominica.</p>
+        <p class="footer-links"><a href="privacy.html">Privacy</a> · © <span data-year>2026</span> Morne Studio</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

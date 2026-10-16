@@ -15,22 +15,38 @@
       property="og:description"
       content="A public missing-persons directory and secure case-management portal for Dominica."
     />
-    <meta property="og:image" content="../assets/work/findthemdm/og.jpg" />
+    <meta property="og:url" content="https://shanest09.github.io/mornestudio/work/findthemdm" />
+    <meta property="og:image" content="https://shanest09.github.io/mornestudio/assets/work/findthemdm/og.jpg" />
+    <meta name="twitter:image" content="https://shanest09.github.io/mornestudio/assets/work/findthemdm/og.jpg" />
+    <link rel="canonical" href="https://shanest09.github.io/mornestudio/work/findthemdm" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3K91RL9Q9"></script>
+    <link rel="preload" href="../assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
     <script>
+      document.documentElement.classList.add('js');
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-K3K91RL9Q9');
+
+      // Load Google Analytics on the first scroll/tap, or 3s after load; events before then are queued
+      (() => {
+        let loaded = false;
+        const loadGa = () => {
+          if (loaded) return;
+          loaded = true;
+          const ga = document.createElement('script');
+          ga.async = true;
+          ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-K3K91RL9Q9';
+          document.head.appendChild(ga);
+        };
+        ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach((type) =>
+          window.addEventListener(type, loadGa, { once: true, passive: true }),
+        );
+        window.addEventListener('load', () => setTimeout(loadGa, 3000));
+      })();
     </script>
     <link rel="stylesheet" href="../styles.css" />
   </head>
@@ -94,7 +110,9 @@
               <p>Find Them DM · demo</p>
             </div>
             <img
-              src="../assets/work/findthemdm/home-desktop.webp"
+              src="../assets/work/findthemdm/home-desktop-1x.webp"
+                srcset="../assets/work/findthemdm/home-desktop-1x.webp 1440w, ../assets/work/findthemdm/home-desktop.webp 2880w"
+                sizes="(min-width: 1240px) 1180px, 96vw"
               width="2880"
               height="1800"
               alt="Find Them DM homepage with the headline 'Help bring them home.', a search bar and a card listing active cases"
@@ -155,7 +173,9 @@
           <div class="cs-gallery">
             <figure>
               <img
-                src="../assets/work/findthemdm/directory-desktop.webp"
+                src="../assets/work/findthemdm/directory-desktop-1x.webp"
+                srcset="../assets/work/findthemdm/directory-desktop-1x.webp 1440w, ../assets/work/findthemdm/directory-desktop.webp 2880w"
+                sizes="(min-width: 1000px) 820px, 96vw"
                 width="2880"
                 height="2200"
                 loading="lazy"
@@ -165,7 +185,9 @@
             </figure>
             <figure>
               <img
-                src="../assets/work/findthemdm/case-desktop.webp"
+                src="../assets/work/findthemdm/case-desktop-1x.webp"
+                srcset="../assets/work/findthemdm/case-desktop-1x.webp 1440w, ../assets/work/findthemdm/case-desktop.webp 2880w"
+                sizes="(min-width: 1000px) 820px, 96vw"
                 width="2880"
                 height="2000"
                 loading="lazy"
@@ -236,7 +258,7 @@
           <span>Morne Studio</span>
         </a>
         <p>Website creation &amp; restoration by Shane St. Louis. Built in Dominica.</p>
-        <p class="footer-year">© <span data-year>2026</span> Morne Studio</p>
+        <p class="footer-links"><a href="../privacy.html">Privacy</a> · © <span data-year>2026</span> Morne Studio</p>
       </div>
     </footer>
 

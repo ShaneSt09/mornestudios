@@ -1,5 +1,3 @@
-document.documentElement.classList.add("js");
-
 const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
@@ -9,8 +7,8 @@ const onScroll = () => {
   header?.classList.toggle("is-scrolled", window.scrollY > 8);
 };
 
-onScroll();
-window.addEventListener("scroll", onScroll, { passive: true });
+requestAnimationFrame(onScroll);
+window.addEventListener("scroll", () => requestAnimationFrame(onScroll), { passive: true });
 
 // Mobile navigation
 const closeNav = () => {
@@ -245,4 +243,37 @@ if (mobileCta && hero && contact && "IntersectionObserver" in window) {
 // Footer year
 document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = String(new Date().getFullYear());
+});
+
+// Analytics: which contact routes and pages people actually use.
+// Form leads are counted on thanks.html, where the form lands after sending.
+const track = (name, params) => {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", name, params);
+  }
+};
+
+document.addEventListener("click", (event) => {
+  const link = event.target instanceof Element ? event.target.closest("a, [data-copy-phone]") : null;
+  if (!link) return;
+
+  const href = link.getAttribute("href") || "";
+
+  if (link.matches("[data-copy-phone]")) {
+    track("contact_click", { method: "phone_copy" });
+  } else if (href.startsWith("https://wa.me/")) {
+    track("contact_click", { method: "whatsapp" });
+  } else if (href.startsWith("mailto:")) {
+    track("contact_click", { method: "email" });
+  } else if (href.startsWith("tel:")) {
+    track("contact_click", { method: "phone" });
+  } else if (href.includes("concepts/")) {
+    track("view_demo", { demo: href.split("concepts/")[1].split("/")[0] });
+  } else if (href.includes("work/")) {
+    track("view_case_study", { project: href.split("work/")[1].replace(".html", "") });
+  }
+});
+
+document.querySelector(".contact-form")?.addEventListener("submit", () => {
+  track("form_submit", { form: "contact" });
 });

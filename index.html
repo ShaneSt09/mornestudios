@@ -15,22 +15,38 @@
       property="og:description"
       content="New websites and website restorations for small businesses in Dominica and beyond. Free website review, fixed quotes, mobile-first builds."
     />
-    <meta property="og:image" content="assets/og.jpg" />
+    <meta property="og:url" content="https://shanest09.github.io/mornestudio/" />
+    <meta property="og:image" content="https://shanest09.github.io/mornestudio/assets/og.jpg" />
+    <meta name="twitter:image" content="https://shanest09.github.io/mornestudio/assets/og.jpg" />
+    <link rel="canonical" href="https://shanest09.github.io/mornestudio/" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3K91RL9Q9"></script>
+    <link rel="preload" href="assets/fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
     <script>
+      document.documentElement.classList.add('js');
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'G-K3K91RL9Q9');
+
+      // Load Google Analytics on the first scroll/tap, or 3s after load; events before then are queued
+      (() => {
+        let loaded = false;
+        const loadGa = () => {
+          if (loaded) return;
+          loaded = true;
+          const ga = document.createElement('script');
+          ga.async = true;
+          ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-K3K91RL9Q9';
+          document.head.appendChild(ga);
+        };
+        ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach((type) =>
+          window.addEventListener(type, loadGa, { once: true, passive: true }),
+        );
+        window.addEventListener('load', () => setTimeout(loadGa, 3000));
+      })();
     </script>
     <script type="application/ld+json">
       {
@@ -41,6 +57,8 @@
         "email": "shane.st.louis@hotmail.com",
         "telephone": "+1-767-265-5905",
         "areaServed": ["Dominica", "Caribbean"],
+        "url": "https://shanest09.github.io/mornestudio/",
+        "image": "https://shanest09.github.io/mornestudio/assets/og.jpg",
         "founder": { "@type": "Person", "name": "Shane St. Louis" }
       }
     </script>
@@ -99,14 +117,16 @@
             </ul>
           </div>
 
-          <a class="hero-shot" href="work/findthemdm.html" aria-label="Read the Find Them DM case study">
+          <a class="hero-shot" href="work/findthemdm.html">
             <div class="browser">
               <div class="browser-bar">
                 <span></span><span></span><span></span>
                 <p>Find Them DM · demo</p>
               </div>
               <img
-                src="assets/work/findthemdm/home-desktop.webp"
+                src="assets/work/findthemdm/home-desktop-1x.webp"
+                srcset="assets/work/findthemdm/home-desktop-1x.webp 1440w, assets/work/findthemdm/home-desktop.webp 2880w"
+                sizes="(min-width: 1000px) 560px, 92vw"
                 width="2880"
                 height="1800"
                 alt="Find Them DM homepage: a green and yellow directory of missing-person alerts for Dominica with a search bar and list of active cases"
@@ -142,10 +162,14 @@
           <figure class="compare" data-compare style="--pos: 0%">
             <div class="compare-stage">
               <div class="compare-pane compare-before">
-                <img draggable="false" src="assets/work/restoration/before.webp" width="2560" height="1600" alt="The old ClearCoat Auto Care website: a scrolling yellow banner, Comic Sans header, broken image, 'call us for prices' and an under-construction notice" />
+                <img draggable="false" src="assets/work/restoration/before-1x.webp"
+                srcset="assets/work/restoration/before-1x.webp 1280w, assets/work/restoration/before.webp 2560w"
+                sizes="(min-width: 1240px) 1180px, 96vw" width="2560" height="1600" alt="The old ClearCoat Auto Care website: a scrolling yellow banner, Comic Sans header, broken image, 'call us for prices' and an under-construction notice" />
               </div>
               <div class="compare-pane compare-after">
-                <img draggable="false" src="assets/work/restoration/after.webp" width="2560" height="1600" alt="The restored ClearCoat website: a dark modern page with the headline 'Showroom shine, at your door', Book online and WhatsApp buttons, a 4.9 star rating and a studio photo of a car being polished" />
+                <img draggable="false" src="assets/work/restoration/after-1x.webp"
+                srcset="assets/work/restoration/after-1x.webp 1280w, assets/work/restoration/after.webp 2560w"
+                sizes="(min-width: 1240px) 1180px, 96vw" width="2560" height="1600" alt="The restored ClearCoat website: a dark modern page with the headline 'Showroom shine, at your door', Book online and WhatsApp buttons, a 4.9 star rating and a studio photo of a car being polished" />
               </div>
               <button class="compare-label compare-label-before" type="button" data-show="100" aria-pressed="false">Before</button>
               <button class="compare-label compare-label-after" type="button" data-show="0" aria-pressed="true">After</button>
@@ -195,7 +219,9 @@
             <div class="case-shots">
               <figure class="case-shot case-shot-main">
                 <img
-                  src="assets/work/findthemdm/directory-desktop.webp"
+                  src="assets/work/findthemdm/directory-desktop-1x.webp"
+                srcset="assets/work/findthemdm/directory-desktop-1x.webp 1440w, assets/work/findthemdm/directory-desktop.webp 2880w"
+                sizes="(min-width: 1000px) 560px, 92vw"
                   width="2880"
                   height="2200"
                   loading="lazy"
@@ -204,7 +230,9 @@
               </figure>
               <figure class="case-shot case-shot-float">
                 <img
-                  src="assets/work/findthemdm/case-desktop.webp"
+                  src="assets/work/findthemdm/case-desktop-1x.webp"
+                srcset="assets/work/findthemdm/case-desktop-1x.webp 1440w, assets/work/findthemdm/case-desktop.webp 2880w"
+                sizes="(min-width: 1000px) 400px, 62vw"
                   width="2880"
                   height="2000"
                   loading="lazy"
@@ -263,10 +291,14 @@
               <a class="concept-media" href="concepts/hearth-table/index.html" aria-label="Open the Hearth &amp; Table live demo">
                 <span class="concept-desktop">
                   <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <img src="assets/work/concepts/hearth-table-desktop.webp" width="2880" height="1800" loading="lazy" alt="Hearth and Table restaurant homepage with a headline about grandma's recipes beside a plated salad" />
+                  <img src="assets/work/concepts/hearth-table-desktop-1x.webp"
+                srcset="assets/work/concepts/hearth-table-desktop-1x.webp 1440w, assets/work/concepts/hearth-table-desktop.webp 2880w"
+                sizes="(min-width: 900px) 480px, 86vw" width="2880" height="1800" loading="lazy" alt="Hearth and Table restaurant homepage with a headline about grandma's recipes beside a plated salad" />
                 </span>
                 <span class="concept-phone">
-                  <img src="assets/work/concepts/hearth-table-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                  <img src="assets/work/concepts/hearth-table-mobile-1x.webp"
+                srcset="assets/work/concepts/hearth-table-mobile-1x.webp 585w, assets/work/concepts/hearth-table-mobile.webp 1170w"
+                sizes="(min-width: 900px) 130px, 24vw" width="1170" height="2532" loading="lazy" alt="" />
                 </span>
               </a>
               <div class="concept-body">
@@ -282,10 +314,14 @@
               <a class="concept-media" href="concepts/riverstone/index.html" aria-label="Open the Riverstone Cottages live demo">
                 <span class="concept-desktop">
                   <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <img src="assets/work/concepts/riverstone-desktop.webp" width="2880" height="1800" loading="lazy" alt="Riverstone Cottages homepage with a rainforest waterfall photo and a booking bar" />
+                  <img src="assets/work/concepts/riverstone-desktop-1x.webp"
+                srcset="assets/work/concepts/riverstone-desktop-1x.webp 1440w, assets/work/concepts/riverstone-desktop.webp 2880w"
+                sizes="(min-width: 900px) 480px, 86vw" width="2880" height="1800" loading="lazy" alt="Riverstone Cottages homepage with a rainforest waterfall photo and a booking bar" />
                 </span>
                 <span class="concept-phone">
-                  <img src="assets/work/concepts/riverstone-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                  <img src="assets/work/concepts/riverstone-mobile-1x.webp"
+                srcset="assets/work/concepts/riverstone-mobile-1x.webp 585w, assets/work/concepts/riverstone-mobile.webp 1170w"
+                sizes="(min-width: 900px) 130px, 24vw" width="1170" height="2532" loading="lazy" alt="" />
                 </span>
               </a>
               <div class="concept-body">
@@ -301,10 +337,14 @@
               <a class="concept-media" href="concepts/peak-fitness/index.html" aria-label="Open the Peak Fitness live demo">
                 <span class="concept-desktop">
                   <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <img src="assets/work/concepts/peak-fitness-desktop.webp" width="2880" height="1800" loading="lazy" alt="Peak Fitness homepage with a bold headline reading Stronger in 6 weeks and a countdown timer" />
+                  <img src="assets/work/concepts/peak-fitness-desktop-1x.webp"
+                srcset="assets/work/concepts/peak-fitness-desktop-1x.webp 1440w, assets/work/concepts/peak-fitness-desktop.webp 2880w"
+                sizes="(min-width: 900px) 480px, 86vw" width="2880" height="1800" loading="lazy" alt="Peak Fitness homepage with a bold headline reading Stronger in 6 weeks and a countdown timer" />
                 </span>
                 <span class="concept-phone">
-                  <img src="assets/work/concepts/peak-fitness-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                  <img src="assets/work/concepts/peak-fitness-mobile-1x.webp"
+                srcset="assets/work/concepts/peak-fitness-mobile-1x.webp 585w, assets/work/concepts/peak-fitness-mobile.webp 1170w"
+                sizes="(min-width: 900px) 130px, 24vw" width="1170" height="2532" loading="lazy" alt="" />
                 </span>
               </a>
               <div class="concept-body">
@@ -320,10 +360,14 @@
               <a class="concept-media" href="concepts/oak-iron/index.html" aria-label="Open the Oak &amp; Iron Co. live demo">
                 <span class="concept-desktop">
                   <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
-                  <img src="assets/work/concepts/oak-iron-desktop.webp" width="2880" height="1800" loading="lazy" alt="Oak and Iron Co. homepage with the headline Built right, built to last, beside a renovated kitchen" />
+                  <img src="assets/work/concepts/oak-iron-desktop-1x.webp"
+                srcset="assets/work/concepts/oak-iron-desktop-1x.webp 1440w, assets/work/concepts/oak-iron-desktop.webp 2880w"
+                sizes="(min-width: 900px) 480px, 86vw" width="2880" height="1800" loading="lazy" alt="Oak and Iron Co. homepage with the headline Built right, built to last, beside a renovated kitchen" />
                 </span>
                 <span class="concept-phone">
-                  <img src="assets/work/concepts/oak-iron-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                  <img src="assets/work/concepts/oak-iron-mobile-1x.webp"
+                srcset="assets/work/concepts/oak-iron-mobile-1x.webp 585w, assets/work/concepts/oak-iron-mobile.webp 1170w"
+                sizes="(min-width: 900px) 130px, 24vw" width="1170" height="2532" loading="lazy" alt="" />
                 </span>
               </a>
               <div class="concept-body">
@@ -486,7 +530,7 @@
           <div class="section-head">
             <p class="eyebrow">FAQ</p>
             <h2>Questions people usually ask.</h2>
-            <p class="section-lede">Something else on your mind? <a href="https://wa.me/17672655905" target="_blank" rel="noreferrer">Ask on WhatsApp.</a></p>
+            <p class="section-lede">Something else on your mind? <a href="https://wa.me/17672655905?text=Hi%20Shane%2C%20I%27d%20like%20a%20free%20website%20review%20for%20my%20business." target="_blank" rel="noreferrer">Ask on WhatsApp.</a></p>
           </div>
 
           <div class="faq-list">
@@ -530,7 +574,7 @@
             </p>
             <ul class="contact-links">
               <li>
-                <a href="https://wa.me/17672655905" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/17672655905?text=Hi%20Shane%2C%20I%27d%20like%20a%20free%20website%20review%20for%20my%20business." target="_blank" rel="noreferrer">
                   <span class="contact-label">WhatsApp</span>
                   Message me directly
                 </a>
@@ -558,7 +602,7 @@
           >
             <input type="hidden" name="_subject" value="New project inquiry from Morne Studio" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://shanest09.github.io/mornestudio/" />
+            <input type="hidden" name="_next" value="https://shanest09.github.io/mornestudio/thanks.html?sent=1" />
             <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
             <div class="field-row">
@@ -613,7 +657,7 @@
           <span>Morne Studio</span>
         </a>
         <p>Website creation &amp; restoration by Shane St. Louis. Built in Dominica.</p>
-        <p class="footer-year">© <span data-year>2026</span> Morne Studio</p>
+        <p class="footer-links"><a href="privacy.html">Privacy</a> · © <span data-year>2026</span> Morne Studio</p>
       </div>
     </footer>
 

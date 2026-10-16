@@ -1,0 +1,11 @@
+# Files that must never be published to the website
+.git
+.github
+.gitignore
+.assetsignore
+.wrangler
+node_modules
+scripts
+wrangler.jsonc
+site.config.json
+*.md

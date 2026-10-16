@@ -1,14 +1,15 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
+  // Static site served by Cloudflare Workers (assets only, no server code).
   "name": "portfolio",
   "compatibility_date": "2026-06-11",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "."
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+    "directory": ".",
+    // Serves 404.html for unknown paths; /work/findthemdm also resolves to .html
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
 }
