@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oak &amp; Iron Co. | Renovation &amp; Construction, Dominica (Design Concept)</title>
+    <meta name="description" content="A contractor website concept by Morne Studio for a fictional renovation company in Dominica." />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400;62..125,500;62..125,700;62..125,800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --char: #1d2124;
+        --char-2: #2a2f33;
+        --steel: #6c7a73;
+        --copper: #c8873e;
+        --copper-dark: #a86c27;
+        --cream: #f4efe7;
+        --paper: #fbf9f5;
+        --line: rgba(29,33,36,.12);
+        --muted: #5d666b;
+        --font: "Archivo", system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+      body { margin: 0; background: var(--paper); color: var(--char); font: 400 1.0625rem/1.6 var(--font); overflow-x: hidden; }
+      img { display: block; max-width: 100%; height: auto; }
+      a { color: inherit; }
+      h1, h2, h3 { margin: 0; font-weight: 800; font-stretch: 112%; line-height: 1; letter-spacing: -0.02em; }
+      p { margin: 0; }
+      .wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
+      .concept-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; padding: 8px 16px; background: #14231c; color: #f5f2ea; font: 500 0.8125rem/1.4 system-ui, sans-serif; text-align: center; }
+      .concept-bar a { color: #ff8a66; font-weight: 600; }
+
+      .kicker { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; font-size: .75rem; font-weight: 700; font-stretch: 125%; letter-spacing: .14em; text-transform: uppercase; color: var(--copper-dark); }
+      .kicker::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+      .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 24px; border: 0; border-radius: 2px; background: var(--copper); color: var(--char); font: 700 1rem var(--font); text-decoration: none; cursor: pointer; transition: background .15s; }
+      .btn:hover { background: #d89a52; }
+      .btn-dark { background: var(--char); color: var(--cream); }
+      .btn-dark:hover { background: var(--char-2); }
+
+      .top { background: var(--char); color: rgba(244,239,231,.75); font-size: .8125rem; }
+      .top .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; padding: 8px 0; }
+      .top b { color: var(--copper); }
+      header { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--line); }
+      .head { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+      .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+      .mark { display: grid; justify-items: center; gap: 2px; }
+      .mark i:nth-child(1) { width: 0; height: 0; border-left: 17px solid transparent; border-right: 17px solid transparent; border-bottom: 13px solid var(--copper); }
+      .mark i:nth-child(2) { width: 26px; height: 4px; background: var(--char); }
+      .mark i:nth-child(3) { width: 34px; height: 5px; background: var(--steel); }
+      .logo b { display: block; font-size: 1.25rem; font-weight: 800; font-stretch: 115%; line-height: 1; }
+      .logo small { display: block; font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+      nav { display: flex; align-items: center; gap: 28px; font-weight: 500; }
+      nav a { text-decoration: none; }
+      nav a:not(.btn):hover { color: var(--copper-dark); }
+      @media (max-width: 860px) { .logo small { display: none; } nav a:not(.btn) { display: none; } nav .btn { min-height: 44px; padding: 0 16px; } .top .wrap span:last-child { display: none; } }
+
+      .hero { display: grid; background: var(--cream); }
+      @media (min-width: 960px) { .hero { grid-template-columns: 1fr 1fr; min-height: 640px; } }
+      .hero-copy { align-self: center; padding: 64px max(16px, calc((100vw - 1200px) / 2)); padding-right: 48px; }
+      @media (max-width: 959px) { .hero-copy { padding: 56px 16px; } }
+      .hero h1 { font-size: clamp(2.75rem, 6vw, 4.75rem); }
+      .hero h1 span { color: var(--copper-dark); }
+      .hero p { max-width: 32rem; margin-top: 22px; font-size: 1.1875rem; color: var(--muted); }
+      .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+      .hero-img { position: relative; min-height: 360px; }
+      .hero-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .hero-badge { position: absolute; left: 24px; bottom: 24px; padding: 16px 20px; background: var(--char); color: var(--cream); max-width: 280px; }
+      .hero-badge b { display: block; font-size: 1.125rem; font-stretch: 110%; }
+      .hero-badge span { font-size: .875rem; color: rgba(244,239,231,.7); }
+
+      .trust { background: var(--char); color: var(--cream); }
+      .trust ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 0; padding: 0; list-style: none; }
+      .trust li { padding: 26px 20px; border-left: 1px solid rgba(244,239,231,.1); }
+      .trust b { display: block; font-size: 2rem; font-weight: 800; font-stretch: 115%; color: var(--copper); line-height: 1.1; }
+      .trust span { font-size: .9375rem; color: rgba(244,239,231,.75); }
+
+      section { padding: 100px 0; }
+      .sec-head { max-width: 680px; margin-bottom: 48px; }
+      .sec-head h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+      .sec-head p { margin-top: 16px; font-size: 1.125rem; color: var(--muted); }
+
+      .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+      .service { padding: 32px 28px; background: var(--paper); transition: background .2s; }
+      .service:hover { background: #fff; }
+      .service svg { width: 40px; height: 40px; color: var(--copper-dark); }
+      .service h3 { margin-top: 20px; font-size: 1.375rem; }
+      .service p { margin-top: 10px; color: var(--muted); }
+      .service a { display: inline-block; margin-top: 16px; font-weight: 700; text-decoration: none; color: var(--copper-dark); }
+
+      .projects { background: var(--cream); }
+      .proj-grid { display: grid; gap: 16px; }
+      @media (min-width: 900px) { .proj-grid { grid-template-columns: 1.4fr 1fr; grid-template-rows: 1fr 1fr; height: 640px; } .proj:first-child { grid-row: span 2; } }
+      .proj { position: relative; overflow: hidden; min-height: 280px; margin: 0; }
+      .proj img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+      .proj:hover img { transform: scale(1.04); }
+      .proj figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 24px 22px; background: linear-gradient(transparent, rgba(29,33,36,.85)); color: #fff; }
+      .proj figcaption b { display: block; font-size: 1.25rem; font-stretch: 110%; }
+      .proj figcaption span { font-size: .875rem; opacity: .8; }
+
+      .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; margin: 0; padding: 0; list-style: none; counter-reset: s; }
+      .steps li { counter-increment: s; padding-top: 22px; border-top: 3px solid var(--char); }
+      .steps li::before { content: "0" counter(s); display: block; font-size: 2.5rem; font-weight: 800; font-stretch: 115%; color: var(--copper); line-height: 1; margin-bottom: 14px; }
+      .steps h3 { font-size: 1.25rem; }
+      .steps p { margin-top: 8px; color: var(--muted); }
+
+      /* Estimate */
+      .estimate { background: var(--char); color: var(--cream); }
+      .est-grid { display: grid; gap: 48px; }
+      @media (min-width: 960px) { .est-grid { grid-template-columns: 1fr 1.1fr; gap: 80px; } }
+      .estimate .kicker { color: var(--copper); }
+      .estimate h2 { font-size: clamp(2.25rem, 5vw, 3.5rem); }
+      .estimate .lead { margin-top: 16px; font-size: 1.125rem; color: rgba(244,239,231,.75); }
+      .quote-card { margin-top: 32px; padding: 24px; border-left: 3px solid var(--copper); background: var(--char-2); }
+      .quote-card blockquote { margin: 0; font-size: 1.125rem; }
+      .quote-card cite { display: block; margin-top: 12px; font-style: normal; font-size: .875rem; color: rgba(244,239,231,.65); }
+      .wizard { padding: clamp(24px, 4vw, 40px); background: var(--paper); color: var(--char); }
+      .progress { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 28px; }
+      .progress i { height: 4px; background: var(--line); }
+      .progress i.on { background: var(--copper); }
+      .step-title { font-size: 1.375rem; margin-bottom: 18px; }
+      .choices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .choices button { padding: 18px 14px; border: 2px solid var(--line); background: #fff; font: 700 1rem var(--font); text-align: left; cursor: pointer; }
+      .choices button:hover, .choices button[aria-pressed="true"] { border-color: var(--copper); background: #fdf6ee; }
+      .choices small { display: block; font-weight: 400; font-size: .8125rem; color: var(--muted); }
+      .wizard label { display: grid; gap: 6px; margin-bottom: 14px; font-weight: 700; font-size: .9375rem; }
+      .wizard input, .wizard textarea, .wizard select { min-height: 50px; padding: 12px 14px; border: 2px solid var(--line); background: #fff; font: 400 1rem var(--font); }
+      .wizard-nav { display: flex; justify-content: space-between; gap: 10px; margin-top: 24px; }
+      .link-btn { border: 0; background: none; font: 700 1rem var(--font); color: var(--muted); cursor: pointer; }
+      .done { text-align: center; padding: 20px 0; }
+      .done b { display: block; font-size: 1.5rem; font-stretch: 110%; margin-bottom: 8px; }
+      [hidden] { display: none !important; }
+
+      footer { padding: 28px 0; background: var(--char); color: rgba(244,239,231,.55); font-size: .875rem; border-top: 1px solid rgba(244,239,231,.1); }
+      footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+    </style>
+  </head>
+  <body>
+    <div class="concept-bar">
+      <span>Design concept by Morne Studio. Oak &amp; Iron Co. is a fictional business.</span>
+      <a href="../../index.html#concepts">← Back to Morne Studio</a>
+    </div>
+
+    <div class="top">
+      <div class="wrap">
+        <span><b>Free estimates</b> · Reply within one business day</span>
+        <span>Mon – Sat, 7am – 5pm · +1 767 000 0000</span>
+      </div>
+    </div>
+
+    <header>
+      <div class="wrap head">
+        <a class="logo" href="#">
+          <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span><b>Oak &amp; Iron Co.</b><small>Renovation · Repair · Build</small></span>
+        </a>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">Process</a>
+          <a class="btn" href="#estimate">Free estimate</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="kicker">Builders since 2009</span>
+          <h1>Built right. Built to last. <span>Built for hurricane season.</span></h1>
+          <p>Roofing, kitchens, extensions and repairs across Dominica, with fixed written quotes and crews that show up when they say they will.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#estimate">Get a free estimate</a>
+            <a class="btn btn-dark" href="#projects">See our work</a>
+          </div>
+        </div>
+        <div class="hero-img">
+          <img src="img/hero.webp" alt="A bright renovated kitchen with a marble island, pendant lights and wood floors" width="1600" height="1067" />
+          <div class="hero-badge"><b>Finished on schedule</b><span>9 out of 10 projects delivered on or before the agreed date</span></div>
+        </div>
+      </div>
+
+      <div class="trust">
+        <div class="wrap">
+          <ul>
+            <li><b>15+</b><span>years building in Dominica</span></li>
+            <li><b>400+</b><span>projects completed</span></li>
+            <li><b>Cat 5</b><span>rated roofing systems</span></li>
+            <li><b>5-yr</b><span>workmanship guarantee</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="services">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">What we do</span>
+            <h2>One crew, from foundation to finish.</h2>
+          </div>
+          <div class="services">
+            <article class="service">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 20 20 6l16 14M9 16v18h22V16"/></svg>
+              <h3>Roofing</h3>
+              <p>Hurricane-strapped roofs, re-roofing and leak repairs with storm-rated fixings.</p>
+              <a href="#estimate">Get a quote →</a>
+            </article>
+            <article class="service">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="5" y="8" width="30" height="26"/><path d="M5 18h30M14 8v10M26 24h4"/></svg>
+              <h3>Kitchens &amp; baths</h3>
+              <p>Full remodels with cabinetry, tiling, plumbing and finishing under one contract.</p>
+              <a href="#estimate">Get a quote →</a>
+            </article>
+            <article class="service">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M4 34h32M8 34V14h12v20M20 20h12v14"/></svg>
+              <h3>Extensions</h3>
+              <p>Extra bedrooms, verandas and apartments, from drawings to keys.</p>
+              <a href="#estimate">Get a quote →</a>
+            </article>
+            <article class="service">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="m24 6 10 10-18 18H6V24z"/><path d="m20 10 10 10"/></svg>
+              <h3>Repairs</h3>
+              <p>Storm damage, rot, windows and doors. Fast response when it can't wait.</p>
+              <a href="#estimate">Get a quote →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">Recent projects</span>
+            <h2>Work we're proud to put our name on.</h2>
+          </div>
+          <div class="proj-grid">
+            <figure class="proj"><img src="img/cabin.webp" alt="A timber cabin with a dark metal roof and a gravel path through a green lawn" width="1067" height="1600" loading="lazy" /><figcaption><b>Timber guest cabin, Morne Prosper</b><span>New build · 10 weeks</span></figcaption></figure>
+            <figure class="proj"><img src="img/kitchen-detail.webp" alt="A marble kitchen island with white bar stools and brass legs" width="880" height="694" loading="lazy" /><figcaption><b>Kitchen remodel, Canefield</b><span>Remodel · 5 weeks</span></figcaption></figure>
+            <figure class="proj"><img src="img/forest-build.webp" alt="A small cabin among tall trees on a forest slope" width="1600" height="1067" loading="lazy" /><figcaption><b>Hillside studio, Laudat</b><span>New build · 8 weeks</span></figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="process">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="kicker">How we work</span>
+            <h2>No surprises, start to finish.</h2>
+          </div>
+          <ol class="steps">
+            <li><h3>Site visit</h3><p>We come out, measure up and listen. Always free.</p></li>
+            <li><h3>Fixed quote</h3><p>A clear written price and schedule within three days.</p></li>
+            <li><h3>Build</h3><p>One project lead, weekly photo updates on WhatsApp.</p></li>
+            <li><h3>Handover</h3><p>Final walkthrough, clean site and a 5-year guarantee.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="estimate" id="estimate">
+        <div class="wrap est-grid">
+          <div>
+            <span class="kicker">Free estimate</span>
+            <h2>Tell us about your project.</h2>
+            <p class="lead">Three quick questions and we'll call you back within one business day to arrange a free site visit.</p>
+            <figure class="quote-card">
+              <blockquote>"After the last storm, three contractors never showed up. Oak &amp; Iron came the next morning, quoted in two days and had our roof back on in a week."</blockquote>
+              <cite>— Paulette R., Grand Bay</cite>
+            </figure>
+          </div>
+
+          <div class="wizard" data-wizard>
+            <div class="progress" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+
+            <div data-step="1">
+              <p class="step-title">What do you need?</p>
+              <div class="choices" data-choices="type">
+                <button type="button">Roofing<small>New, re-roof, repair</small></button>
+                <button type="button">Kitchen / bath<small>Remodel or refit</small></button>
+                <button type="button">Extension<small>Rooms, veranda</small></button>
+                <button type="button">Repair<small>Storm, rot, doors</small></button>
+              </div>
+            </div>
+
+            <div data-step="2" hidden>
+              <p class="step-title">When would you like to start?</p>
+              <div class="choices" data-choices="when">
+                <button type="button">As soon as possible</button>
+                <button type="button">Within 3 months</button>
+                <button type="button">3 – 6 months</button>
+                <button type="button">Just planning</button>
+              </div>
+            </div>
+
+            <form data-step="3" hidden>
+              <p class="step-title">Where can we reach you?</p>
+              <label>Name<input type="text" required /></label>
+              <label>Phone or WhatsApp<input type="tel" required /></label>
+              <label>Village / area<input type="text" /></label>
+              <div class="wizard-nav">
+                <button class="link-btn" type="button" data-back>← Back</button>
+                <button class="btn" type="submit">Request my estimate</button>
+              </div>
+            </form>
+
+            <div class="done" data-step="4" hidden>
+              <b>Thanks! We'll be in touch.</b>
+              <p>This is a demo, so nothing was sent. On a real site, this lands in the owner's inbox and WhatsApp.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© Oak &amp; Iron Co. (fictional) · Dominica</span>
+        <span>Website concept by <a href="../../index.html">Morne Studio</a></span>
+      </div>
+    </footer>
+
+    <script>
+      // Three-step estimate form
+      const wizard = document.querySelector("[data-wizard]");
+      const bars = wizard.querySelectorAll(".progress i");
+      const show = (n) => {
+        wizard.querySelectorAll("[data-step]").forEach((s) => (s.hidden = Number(s.dataset.step) !== n));
+        bars.forEach((b, i) => b.classList.toggle("on", i < n));
+      };
+      wizard.querySelectorAll("[data-choices] button").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          btn.parentElement.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+          const step = Number(btn.closest("[data-step]").dataset.step);
+          setTimeout(() => show(step + 1), 180);
+        });
+      });
+      wizard.querySelector("[data-back]").addEventListener("click", () => show(2));
+      wizard.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        show(4);
+      });
+    </script>
+  </body>
+</html>

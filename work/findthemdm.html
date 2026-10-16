@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Them DM Case Study | Morne Studio</title>
+    <meta
+      name="description"
+      content="How Morne Studio designed and built Find Them DM, a missing-persons alert platform for Dominica with a public directory and a secure staff portal."
+    />
+    <meta name="theme-color" content="#14231c" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Find Them DM | Morne Studio case study" />
+    <meta
+      property="og:description"
+      content="A public missing-persons directory and secure case-management portal for Dominica."
+    />
+    <meta property="og:image" content="../assets/work/findthemdm/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3K91RL9Q9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K3K91RL9Q9');
+    </script>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="wrap header-inner">
+        <a class="brand" href="../index.html" aria-label="Morne Studio home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M4 38L18 16L30 38H4Z" fill="currentColor" opacity=".45" />
+            <path d="M14 38L31 10L45 38H14Z" fill="currentColor" />
+            <path d="M31 10L36 38H45L31 10Z" fill="var(--accent)" />
+          </svg>
+          <span>Morne Studio</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav class="nav" id="mainNav" aria-label="Main">
+          <a href="../index.html#work">Work</a>
+          <a href="../index.html#services">Services</a>
+          <a href="../index.html#packages">Packages</a>
+          <a href="../index.html#process">Process</a>
+          <a href="../index.html#faq">FAQ</a>
+          <a class="button button-small" href="../index.html#contact">Free website review</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="cs-hero">
+        <div class="wrap">
+          <a class="back-link" href="../index.html#work"><span aria-hidden="true">←</span> All work</a>
+          <p class="eyebrow">Case study · Web platform</p>
+          <h1>Find Them DM</h1>
+          <p class="lede">
+            Dominica's missing-person alerts lived on social media, where they scrolled away within hours and
+            outdated posts kept circulating after people were found. Find Them DM gives every case one permanent,
+            searchable, shareable home, and gives the people managing them a secure place to work.
+          </p>
+
+          <dl class="cs-facts">
+            <div><dt>Client</dt><dd>Independent community service</dd></div>
+            <div><dt>Scope</dt><dd>Design, development, deployment</dd></div>
+            <div><dt>Platform</dt><dd>Public site + staff portal</dd></div>
+            <div><dt>Stack</dt><dd>Django · PostgreSQL · Docker</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="cs-banner">
+        <div class="wrap">
+          <div class="browser">
+            <div class="browser-bar">
+              <span></span><span></span><span></span>
+              <p>Find Them DM · demo</p>
+            </div>
+            <img
+              src="../assets/work/findthemdm/home-desktop.webp"
+              width="2880"
+              height="1800"
+              alt="Find Them DM homepage with the headline 'Help bring them home.', a search bar and a card listing active cases"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <section class="cs-body">
+          <h2>The problem</h2>
+          <div class="cs-prose">
+            <p>
+              When someone goes missing in Dominica, the alert spreads through Facebook and WhatsApp. That reach is
+              valuable, but posts are hard to find a day later, details change between copies, and nobody can tell
+              whether a forwarded alert is still current.
+            </p>
+            <p>
+              The goal was a single trusted place: <strong>easy to search on any phone, built to be shared</strong>,
+              clear about who has been found, and run by a small team who must be confident nothing goes public by
+              mistake.
+            </p>
+          </div>
+        </section>
+
+        <section class="cs-body">
+          <h2>The public site</h2>
+          <div class="cs-grid">
+            <div class="cs-card">
+              <h3>Search &amp; filters</h3>
+              <p>Search by name, nickname or community. Filter by alert type, parish and dates.</p>
+            </div>
+            <div class="cs-card">
+              <h3>Colour-coded alerts</h3>
+              <p>Cases follow the national alert classifications, so each one shows at a glance who is missing.</p>
+            </div>
+            <div class="cs-card">
+              <h3>Share anywhere</h3>
+              <p>One-tap WhatsApp, Facebook and X sharing, plus printable posters with a QR code to the live page.</p>
+            </div>
+            <div class="cs-card">
+              <h3>"Located" banners</h3>
+              <p>Found people are clearly marked, so old alerts stop circulating, with a public timeline of updates.</p>
+            </div>
+            <div class="cs-card">
+              <h3>Feeds for media</h3>
+              <p>RSS feeds let newsrooms and partners pick up new alerts and updates automatically.</p>
+            </div>
+            <div class="cs-card">
+              <h3>Fast on any connection</h3>
+              <p>Server-rendered pages with no heavy front-end framework, so they load quickly on mobile data.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="cs-body">
+          <h2>Screens</h2>
+          <div class="cs-gallery">
+            <figure>
+              <img
+                src="../assets/work/findthemdm/directory-desktop.webp"
+                width="2880"
+                height="2200"
+                loading="lazy"
+                alt="Directory page with search, filters, and tabs for missing, located and closed cases"
+              />
+              <figcaption>The directory: search and filters up front, with missing, located and closed cases kept separate.</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="../assets/work/findthemdm/case-desktop.webp"
+                width="2880"
+                height="2000"
+                loading="lazy"
+                alt="Case page for a fictional person, showing last-seen details, key facts and share buttons"
+              />
+              <figcaption>A case page: last-seen details first, then key facts and every way to share.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="cs-body">
+          <h2>The staff portal</h2>
+          <div class="cs-prose">
+            <p>
+              Behind the public site is a portal where staff create and manage cases. Nothing reaches the public
+              without a second pair of eyes: <strong>cases move from draft to review to approval to publication</strong>,
+              and the person who submits a case can't approve it.
+            </p>
+            <p>
+              Staff have roles (case managers, publishers and auditors). Sign-in uses two-factor authentication, and an
+              audit trail records every change, by whom and why. Edits to live cases wait for approval, uploaded
+              photos have their location data stripped, and private notes never appear publicly.
+            </p>
+            <p>
+              Everything an agency would want to change (name, logo, colours, police contact) is a setting, so the
+              platform can be adopted by an official body without rewriting code. A separate demo mode with fictional
+              records lets prospective partners try the whole workflow safely.
+            </p>
+          </div>
+        </section>
+
+        <section class="cs-body">
+          <h2>Built with</h2>
+          <div class="cs-tags">
+            <span class="pill">Django</span>
+            <span class="pill">PostgreSQL</span>
+            <span class="pill">Docker</span>
+            <span class="pill">nginx</span>
+            <span class="pill">Bootstrap</span>
+            <span class="pill">Two-factor auth (TOTP)</span>
+            <span class="pill">RSS</span>
+            <span class="pill">Automated tests</span>
+          </div>
+        </section>
+      </div>
+
+      <p class="wrap" style="padding-bottom: 56px; color: var(--ink-3); font-size: 0.9375rem">
+        Screens are from the demonstration site. Every person shown is a fictional sample record.
+      </p>
+
+      <section class="cs-cta">
+        <div class="wrap">
+          <h2>Need something built for your business or organisation?</h2>
+          <p>From a simple business site to a platform like this one, it starts with a free conversation.</p>
+          <a class="button" href="../index.html#contact">Get a free website review</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand brand-footer" href="../index.html">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M4 38L18 16L30 38H4Z" fill="currentColor" opacity=".45" />
+            <path d="M14 38L31 10L45 38H14Z" fill="currentColor" />
+            <path d="M31 10L36 38H45L31 10Z" fill="var(--accent)" />
+          </svg>
+          <span>Morne Studio</span>
+        </a>
+        <p>Website creation &amp; restoration by Shane St. Louis. Built in Dominica.</p>
+        <p class="footer-year">© <span data-year>2026</span> Morne Studio</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

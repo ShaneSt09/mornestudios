@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riverstone Cottages | Rainforest Stays, Dominica (Design Concept)</title>
+    <meta name="description" content="A guesthouse website concept by Morne Studio for fictional rainforest cottages in Dominica." />
+    <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --forest: #13291f;
+        --forest-2: #1f3d2f;
+        --leaf: #4f7a5a;
+        --sand: #f4f0e6;
+        --sand-2: #e9e2d0;
+        --sun: #e8b04b;
+        --ink: #13291f;
+        --muted: #5a6b62;
+        --serif: "Cormorant Garamond", Georgia, serif;
+        --sans: "Manrope", system-ui, sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+      body { margin: 0; background: var(--sand); color: var(--ink); font: 400 1.0625rem/1.65 var(--sans); overflow-x: hidden; }
+      img { display: block; max-width: 100%; height: auto; }
+      a { color: inherit; }
+      h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 500; line-height: 1; letter-spacing: -0.01em; }
+      p { margin: 0; }
+      .wrap { width: min(1200px, 100% - 32px); margin-inline: auto; }
+      .concept-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 14px; padding: 8px 16px; background: #14231c; color: #f5f2ea; font: 500 0.8125rem/1.4 system-ui, sans-serif; text-align: center; }
+      .concept-bar a { color: #ff8a66; font-weight: 600; }
+
+      .eyebrow { display: block; margin-bottom: 14px; font-size: .75rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--leaf); }
+      .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 26px; border: 0; border-radius: 4px; background: var(--sun); color: var(--forest); font: 700 .9375rem var(--sans); letter-spacing: .02em; text-decoration: none; cursor: pointer; transition: transform .15s, background .15s; }
+      .btn:hover { background: #f2c065; transform: translateY(-1px); }
+      .btn-dark { background: var(--forest); color: var(--sand); }
+      .btn-dark:hover { background: var(--forest-2); }
+
+      /* Hero */
+      .hero { position: relative; min-height: min(92vh, 860px); display: flex; flex-direction: column; color: #fff; }
+      .hero > img { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; }
+      .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,25,18,.6) 0%, rgba(10,25,18,.2) 30%, rgba(10,25,18,.35) 55%, rgba(10,25,18,.8) 100%); }
+      @media (max-width: 799px) { .hero::after { background: linear-gradient(180deg, rgba(10,25,18,.7), rgba(10,25,18,.55) 50%, rgba(10,25,18,.85)); } .booking { grid-template-columns: 1fr 1fr; } .booking label:nth-of-type(3), .booking .btn { grid-column: 1 / -1; } .booking .btn { min-height: 52px; } }
+      .hero > * { position: relative; z-index: 1; }
+      .head { display: flex; align-items: center; justify-content: space-between; height: 84px; }
+      .logo { display: flex; align-items: center; gap: 10px; font-family: var(--serif); font-size: 1.625rem; font-weight: 600; text-decoration: none; }
+      .logo svg { width: 30px; height: 30px; }
+      .head nav { display: flex; gap: 30px; font-size: .9375rem; font-weight: 600; }
+      .head nav a { text-decoration: none; opacity: .9; }
+      .head nav a:hover { opacity: 1; }
+      @media (max-width: 800px) { .head nav a:not(:last-child) { display: none; } }
+      .hero-body { margin-top: auto; padding: 40px 0; }
+      .hero h1, .hero-body > p { text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+      .hero h1 { max-width: 12ch; font-size: clamp(3.25rem, 9vw, 7.5rem); font-weight: 500; }
+      .hero h1 em { font-style: italic; color: var(--sun); }
+      .hero-body > p { max-width: 34rem; margin-top: 18px; font-size: 1.1875rem; opacity: .92; }
+
+      /* Booking widget */
+      .booking { display: grid; gap: 8px; margin-top: 36px; padding: 12px; border-radius: 8px; background: var(--sand); color: var(--ink); box-shadow: 0 20px 50px rgba(0,0,0,.3); }
+      @media (min-width: 800px) { .booking { grid-template-columns: 1fr 1fr 1fr auto; align-items: end; max-width: 900px; } }
+      .booking label { display: grid; gap: 4px; padding: 8px 12px; border-radius: 6px; background: #fff; font-size: .6875rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+      .booking input, .booking select { border: 0; padding: 2px 0; background: transparent; color: var(--ink); font: 600 1rem var(--sans); outline: none; width: 100%; }
+      .booking .btn { min-height: 62px; }
+      .quote { grid-column: 1 / -1; padding: 4px 6px 2px; font-size: .9375rem; color: var(--muted); }
+      .quote b { color: var(--ink); }
+
+      section { padding: 104px 0; }
+      .intro { display: grid; gap: 32px; }
+      @media (min-width: 900px) { .intro { grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; } }
+      .intro h2 { font-size: clamp(2.5rem, 5.5vw, 4.25rem); }
+      .intro p { font-size: 1.125rem; color: var(--muted); }
+      .stats { display: flex; flex-wrap: wrap; gap: 32px; margin-top: 28px; }
+      .stats b { display: block; font-family: var(--serif); font-size: 2.5rem; font-weight: 600; line-height: 1; }
+      .stats span { font-size: .875rem; color: var(--muted); }
+
+      /* Cottages */
+      .cottages { display: grid; gap: 28px; margin-top: 64px; }
+      @media (min-width: 900px) { .cottages { grid-template-columns: repeat(3, 1fr); } }
+      .cottage img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 6px; transition: transform .4s; }
+      .cottage figure { margin: 0; overflow: hidden; border-radius: 6px; }
+      .cottage:hover img { transform: scale(1.04); }
+      .cottage-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 18px; }
+      .cottage h3 { font-size: 2rem; }
+      .cottage .rate { font-weight: 700; white-space: nowrap; }
+      .cottage .rate small { font-weight: 500; color: var(--muted); }
+      .cottage p { margin-top: 6px; color: var(--muted); }
+      .amen { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; padding: 0; list-style: none; }
+      .amen li { padding: 3px 10px; border: 1px solid rgba(19,41,31,.2); border-radius: 999px; font-size: .8125rem; font-weight: 600; }
+
+      /* Experiences */
+      .exp { background: var(--forest); color: var(--sand); }
+      .exp .eyebrow { color: var(--sun); }
+      .exp-grid { display: grid; gap: 48px; align-items: center; }
+      @media (min-width: 900px) { .exp-grid { grid-template-columns: 1.1fr 1fr; gap: 80px; } }
+      .exp img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 6px; }
+      .exp h2 { font-size: clamp(2.5rem, 5vw, 4rem); }
+      .exp-list { margin: 32px 0 0; padding: 0; list-style: none; }
+      .exp-list li { display: grid; grid-template-columns: 56px 1fr; gap: 4px 16px; padding: 20px 0; border-top: 1px solid rgba(244,240,230,.15); }
+      .exp-list b { grid-row: span 2; font-family: var(--serif); font-size: 2rem; font-weight: 600; color: var(--sun); line-height: 1; }
+      .exp-list h3 { font-family: var(--sans); font-size: 1.0625rem; font-weight: 700; line-height: 1.3; }
+      .exp-list p { color: rgba(244,240,230,.7); font-size: .9688rem; }
+
+      /* Reviews */
+      .quote-big { max-width: 900px; margin: 0 auto; text-align: center; }
+      .quote-big blockquote { margin: 0; font-family: var(--serif); font-size: clamp(1.75rem, 3.6vw, 2.75rem); font-style: italic; line-height: 1.2; }
+      .quote-big cite { display: block; margin-top: 24px; font-style: normal; font-weight: 700; font-size: .9375rem; }
+      .quote-big cite span { color: var(--muted); font-weight: 500; }
+      .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 40px; margin-top: 40px; color: var(--muted); font-size: .875rem; }
+      .badges b { color: var(--ink); font-size: 1.125rem; }
+
+      /* Getting here */
+      .here { background: var(--sand-2); }
+      .here-grid { display: grid; gap: 48px; }
+      @media (min-width: 900px) { .here-grid { grid-template-columns: 1fr 1.2fr; gap: 80px; } }
+      .here h2 { font-size: clamp(2.5rem, 5vw, 3.75rem); }
+      details { border-bottom: 1px solid rgba(19,41,31,.2); }
+      summary { padding: 20px 0; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+      summary::-webkit-details-marker { display: none; }
+      summary::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--leaf); }
+      details[open] summary::after { content: "–"; }
+      details p { padding-bottom: 20px; color: var(--muted); }
+
+      .cta { position: relative; padding: 140px 0; color: #fff; text-align: center; overflow: hidden; }
+      .cta img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+      .cta::after { content: ""; position: absolute; inset: 0; background: rgba(10,25,18,.55); }
+      .cta .wrap { position: relative; z-index: 1; }
+      .cta h2 { font-size: clamp(2.75rem, 7vw, 5.5rem); }
+      .cta p { margin: 16px auto 32px; max-width: 30rem; font-size: 1.125rem; opacity: .9; }
+
+      footer { padding: 28px 0; background: var(--forest); color: rgba(244,240,230,.6); font-size: .875rem; }
+      footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+    </style>
+  </head>
+  <body>
+    <div class="concept-bar">
+      <span>Design concept by Morne Studio. Riverstone Cottages is a fictional business.</span>
+      <a href="../../index.html#concepts">← Back to Morne Studio</a>
+    </div>
+
+    <header class="hero">
+      <img src="img/hero.webp" alt="A lush green valley with twin waterfalls and mountains in morning light" width="1200" height="1600" />
+      <div class="wrap head">
+        <a class="logo" href="#">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 26 12 10l6 9 4-5 8 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="23" cy="7" r="3" fill="#e8b04b"/></svg>
+          Riverstone
+        </a>
+        <nav>
+          <a href="#stay">Cottages</a>
+          <a href="#explore">Explore</a>
+          <a href="#here">Getting here</a>
+          <a href="#book">Book direct</a>
+        </nav>
+      </div>
+      <div class="wrap hero-body">
+        <h1>Wake up in the <em>rainforest.</em></h1>
+        <p>Three private cottages in the Roseau Valley, ten minutes from hot springs and waterfalls. Book direct for the best rate.</p>
+
+        <form class="booking" id="book" onsubmit="return false">
+          <label>Check in<input type="date" data-in /></label>
+          <label>Check out<input type="date" data-out /></label>
+          <label>Cottage
+            <select data-cottage>
+              <option value="165">Fern · 2 guests</option>
+              <option value="210">River · 4 guests</option>
+              <option value="245">Canopy · 2 guests</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Check availability</button>
+          <p class="quote" data-quote aria-live="polite"></p>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="wrap intro">
+          <div>
+            <span class="eyebrow">Welcome</span>
+            <h2>Slow mornings, river sounds, mountain air.</h2>
+          </div>
+          <div>
+            <p>Riverstone is a family-run hideaway on two acres of garden beside the river. Breakfast is fruit from our own trees, the coffee is local, and the nights are full of tree frogs.</p>
+            <div class="stats">
+              <div><b>4.97</b><span>guest rating</span></div>
+              <div><b>10 min</b><span>to hot springs</span></div>
+              <div><b>20 min</b><span>to Roseau</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap cottages" id="stay">
+          <article class="cottage">
+            <figure><img src="img/porch.webp" alt="A wooden porch with a striped hammock looking out to trees" width="1600" height="1067" loading="lazy" /></figure>
+            <div class="cottage-top"><h3>Fern</h3><span class="rate">US$165 <small>/ night</small></span></div>
+            <p>Cosy one-bedroom with a wraparound porch and a hammock made for afternoon naps.</p>
+            <ul class="amen"><li>2 guests</li><li>Queen bed</li><li>Garden view</li></ul>
+          </article>
+          <article class="cottage">
+            <figure><img src="img/lodge.webp" alt="A wood and glass cottage surrounded by tropical garden" width="1068" height="1600" loading="lazy" /></figure>
+            <div class="cottage-top"><h3>River</h3><span class="rate">US$210 <small>/ night</small></span></div>
+            <p>Two bedrooms and a full kitchen, steps from a swimming hole. Ideal for families.</p>
+            <ul class="amen"><li>4 guests</li><li>Kitchen</li><li>River access</li></ul>
+          </article>
+          <article class="cottage">
+            <figure><img src="img/pool.webp" alt="A woven hammock beside a small turquoise plunge pool" width="1200" height="1600" loading="lazy" /></figure>
+            <div class="cottage-top"><h3>Canopy</h3><span class="rate">US$245 <small>/ night</small></span></div>
+            <p>Our honeymoon cottage, with a private plunge pool and an outdoor rain shower.</p>
+            <ul class="amen"><li>2 guests</li><li>Plunge pool</li><li>Adults only</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="exp" id="explore">
+        <div class="wrap exp-grid">
+          <img src="img/waterfall.webp" alt="A waterfall pouring into a clear rocky pool surrounded by ferns" width="1600" height="1201" loading="lazy" />
+          <div>
+            <span class="eyebrow">Explore</span>
+            <h2>Nature island, on your doorstep.</h2>
+            <ul class="exp-list">
+              <li><b>01</b><h3>Twin waterfalls</h3><p>A short, shaded hike to two falls side by side.</p></li>
+              <li><b>02</b><h3>Hot springs</h3><p>Soak in sulphur pools after a day on the trails.</p></li>
+              <li><b>03</b><h3>Guided hikes</h3><p>We'll connect you with certified local guides.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap quote-big">
+          <span class="eyebrow">Guest stories</span>
+          <blockquote>"We came for three nights and stayed for seven. Waking up to the river and Marie's breakfast was the best part of our whole Caribbean trip."</blockquote>
+          <cite>Sarah &amp; James <span>· London, UK</span></cite>
+          <div class="badges">
+            <span><b>4.97</b> Airbnb</span>
+            <span><b>9.8</b> Booking.com</span>
+            <span><b>5.0</b> Google</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="here" id="here">
+        <div class="wrap here-grid">
+          <div>
+            <span class="eyebrow">Plan your trip</span>
+            <h2>Getting here &amp; good to know.</h2>
+          </div>
+          <div>
+            <details open><summary>How do I get from the airport?</summary><p>We arrange a trusted driver from Douglas-Charles Airport. It's about 75 minutes through the island's interior, and worth every bend.</p></details>
+            <details><summary>Is breakfast included?</summary><p>Yes. A tropical breakfast with fruit from our garden, fresh bread and local coffee is served on your porch each morning.</p></details>
+            <details><summary>Do I need a car?</summary><p>Not necessarily. Buses pass at the gate and we can book drivers and guides for day trips.</p></details>
+            <details><summary>What's your cancellation policy?</summary><p>Free cancellation up to 14 days before arrival when you book direct.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <img src="img/swing.webp" alt="" width="1067" height="1600" loading="lazy" />
+        <div class="wrap">
+          <h2>Your cottage is waiting.</h2>
+          <p>Book direct with us for the best rate, free airport pickup on stays of five nights or more, and no booking fees.</p>
+          <a class="btn" href="#book">Check availability</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© Riverstone Cottages (fictional) · Roseau Valley, Dominica</span>
+        <span>Website concept by <a href="../../index.html">Morne Studio</a></span>
+      </div>
+    </footer>
+
+    <script>
+      // Booking widget: default dates and a live price estimate
+      const checkIn = document.querySelector("[data-in]");
+      const checkOut = document.querySelector("[data-out]");
+      const cottage = document.querySelector("[data-cottage]");
+      const quote = document.querySelector("[data-quote]");
+      const iso = (d) => d.toISOString().slice(0, 10);
+      const start = new Date();
+      start.setDate(start.getDate() + 21);
+      const end = new Date(start);
+      end.setDate(end.getDate() + 4);
+      checkIn.value = iso(start);
+      checkOut.value = iso(end);
+      checkIn.min = iso(new Date());
+
+      const update = () => {
+        const nights = Math.round((new Date(checkOut.value) - new Date(checkIn.value)) / 86400000);
+        if (!nights || nights < 1) {
+          quote.textContent = "Choose a check-out date after check-in.";
+          return;
+        }
+        const total = nights * Number(cottage.value);
+        const pickup = nights >= 5 ? " · free airport pickup included" : "";
+        quote.innerHTML = `<b>${nights} night${nights > 1 ? "s" : ""} · US$${total.toLocaleString()}</b> total, breakfast included${pickup}`;
+      };
+
+      [checkIn, checkOut, cottage].forEach((el) => el.addEventListener("change", update));
+      document.getElementById("book").addEventListener("submit", () => {
+        quote.innerHTML = "<b>Good news: those dates are available.</b> (This is a demo, so no booking was made.)";
+      });
+      update();
+    </script>
+  </body>
+</html>

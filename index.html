@@ -3,18 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morne Studio | Website Design & Restoration in Dominica</title>
     <meta
       name="description"
-      content="A modern portfolio for website creation, restoration, flyers, and logo design with deep-space visual styling."
+      content="Morne Studio builds new websites and restores outdated ones for small businesses and organisations in Dominica and beyond. Mobile-first, fast, and built to bring in customers."
     />
-    <title>Morne Studio | Web, Logo & Flyer Design</title>
+    <meta name="theme-color" content="#14231c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Morne Studio | Websites that win you customers" />
+    <meta
+      property="og:description"
+      content="New websites and website restorations for small businesses in Dominica and beyond. Free website review, fixed quotes, mobile-first builds."
+    />
+    <meta property="og:image" content="assets/og.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3K91RL9Q9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -23,271 +32,522 @@
 
       gtag('config', 'G-K3K91RL9Q9');
     </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Morne Studio",
+        "description": "Website creation and website restoration for small businesses and organisations.",
+        "email": "shane.st.louis@hotmail.com",
+        "telephone": "+1-767-265-5905",
+        "areaServed": ["Dominica", "Caribbean"],
+        "founder": { "@type": "Person", "name": "Shane St. Louis" }
+      }
+    </script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <div class="stars stars-one"></div>
-      <div class="stars stars-two"></div>
-      <div class="orb orb-blue"></div>
-      <div class="orb orb-cyan"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <header class="site-header">
-        <button class="brand" type="button" data-scroll-top aria-label="Morne Studio home">
-          <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 48 48" role="img">
-              <path class="mountain-back" d="M6 34L18.5 15.5L31 34H6Z" />
-              <path class="mountain-front" d="M16 34L29.5 11L42 34H16Z" />
-              <path class="mountain-cut" d="M29.5 11L35 34H42L29.5 11Z" />
-            </svg>
-          </span>
+    <header class="site-header" data-header>
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" aria-label="Morne Studio home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M4 38L18 16L30 38H4Z" fill="currentColor" opacity=".45" />
+            <path d="M14 38L31 10L45 38H14Z" fill="currentColor" />
+            <path d="M31 10L36 38H45L31 10Z" fill="var(--accent)" />
+          </svg>
           <span>Morne Studio</span>
-        </button>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
-        <nav class="nav-links" id="mainNav" aria-label="Main navigation">
-          <a href="#services">Services</a>
-          <a href="#mockups">Mockups</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+        </a>
 
-      <main id="top">
-        <section class="hero section-grid">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Website Creation / Restorations / Flyers / Logos</p>
-            <h1>Clean digital design for businesses ready to look more professional.</h1>
-            <p class="hero-text">
-              Websites, refreshes, logos, and promo graphics built with a modern
-              look, clear messaging, and layouts that make your services easy to
-              understand.
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mainNav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav class="nav" id="mainNav" aria-label="Main">
+          <a href="#work">Work</a>
+          <a href="#services">Services</a>
+          <a href="#packages">Packages</a>
+          <a href="#process">Process</a>
+          <a href="#faq">FAQ</a>
+          <a class="button button-small" href="#contact">Free website review</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="kicker"><span class="dot"></span> Website creation &amp; restoration · Dominica</p>
+            <h1>Your website should be <em>winning</em> you customers.</h1>
+            <p class="lede">
+              I build new websites and rescue tired ones for small businesses and organisations.
+              Fast on phones, clear about what you do, and built so people actually get in touch.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#mockups">View mockups</a>
-              <a class="button button-secondary" href="#contact">Start a project</a>
+              <a class="button" href="#contact">Get a free website review</a>
+              <a class="button button-ghost" href="#work">See the work <span aria-hidden="true">→</span></a>
             </div>
+            <ul class="hero-points" aria-label="What you get">
+              <li>Fixed quote before any work starts</li>
+              <li>Reply within 24 hours</li>
+              <li>You own your site and files</li>
+            </ul>
           </div>
 
-          <div class="hero-visual reveal">
-            <div class="space-card">
-              <div class="planet"></div>
-              <div class="orbit orbit-one"></div>
-              <div class="orbit orbit-two"></div>
-              <div class="dashboard-card dashboard-main">
-                <span class="window-dots"></span>
-                <h2>Web & Brand Design</h2>
-                <p>Responsive pages, clean visuals, and practical marketing assets.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="services reveal" id="services">
-          <div class="section-heading">
-            <p class="eyebrow">What the studio can create</p>
-            <h2>Practical design work with a polished modern edge.</h2>
-          </div>
-          <div class="service-grid">
-            <article class="service-card">
-              <span class="service-icon">01</span>
-              <h3>Website Creation</h3>
-              <p>Landing pages, service sites, portfolio builds, and responsive layouts built to convert visitors.</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon">02</span>
-              <h3>Website Restoration</h3>
-              <p>Refresh outdated pages, repair messy layouts, modernize colors, and improve mobile usability.</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon">03</span>
-              <h3>Flyers & Promos</h3>
-              <p>Event flyers, product promos, social graphics, and launch announcements with strong visual hierarchy.</p>
-            </article>
-            <article class="service-card">
-              <span class="service-icon">04</span>
-              <h3>Logo Concepts</h3>
-              <p>Clean logo directions, brand marks, color palettes, and simple visual systems for new ventures.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="mockups" id="mockups">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Concept mockups</p>
-            <h2>Fictional projects built to show what your studio can deliver.</h2>
-            <p class="section-note">
-              These are sample concepts for display purposes, giving visitors a
-              realistic preview of website, flyer, logo, and restoration work.
-            </p>
-          </div>
-
-          <div class="mockup-grid">
-            <article class="mockup-card large reveal">
-              <div class="mockup-browser">
+          <a class="hero-shot" href="work/findthemdm.html" aria-label="Read the Find Them DM case study">
+            <div class="browser">
+              <div class="browser-bar">
                 <span></span><span></span><span></span>
+                <p>Find Them DM · demo</p>
               </div>
-              <div class="mockup-preview refresh-preview">
-                <div class="site-before">
-                  <div class="old-label">Before</div>
-                  <strong>ClearCoat Auto Care</strong>
-                  <div class="old-hero"></div>
-                  <span></span>
-                  <span></span>
-                  <button>Call now</button>
-                </div>
-                <div class="site-after">
-                  <div class="new-label">After</div>
-                  <div class="mini-nav">
-                    <strong>ClearCoat</strong>
-                    <small>Book detail</small>
-                  </div>
-                  <h4>Mobile detailing that comes to you.</h4>
-                  <div class="service-strip">
-                    <span>Wash</span>
-                    <span>Interior</span>
-                    <span>Ceramic</span>
-                  </div>
-                  <div class="stat-row">
-                    <div><b>4.9</b><small>rating</small></div>
-                    <div><b>24h</b><small>reply</small></div>
-                  </div>
-                </div>
-              </div>
-              <div class="mockup-content">
-                <p class="tag">Website restoration</p>
-                <h3>ClearCoat Auto Care</h3>
-                <p>A before-and-after concept showing how an outdated service site can become cleaner, faster, and easier to book from mobile.</p>
-                <div class="mockup-meta">
-                  <span>Concept project</span>
-                  <span>Auto detailing</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="mockup-card reveal">
-              <div class="mockup-preview restaurant-preview">
-                <div class="restaurant-top">
-                  <strong>Hearth & Table</strong>
-                  <span>Menu</span>
-                </div>
-                <div class="restaurant-photo"></div>
-                <div class="restaurant-copy">
-                  <p>Family-owned kitchen</p>
-                  <h4>Comfort food, modern service.</h4>
-                  <small>Order online</small>
-                </div>
-              </div>
-              <div class="mockup-content">
-                <p class="tag">Website creation</p>
-                <h3>Hearth & Table</h3>
-                <p>A restaurant homepage concept with clear ordering paths, featured menu space, and a warmer brand direction.</p>
-                <div class="mockup-meta">
-                  <span>Concept project</span>
-                  <span>Restaurant</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="mockup-card reveal">
-              <div class="mockup-preview flyer-preview">
-                <div class="flyer-kicker">6 week program</div>
-                <h4>Peak Fitness Challenge</h4>
-                <strong>Starts 09.02</strong>
-                <span>Training / Meal guide / Weekly check-ins</span>
-                <small>Promo flyer concept</small>
-              </div>
-              <div class="mockup-content">
-                <p class="tag">Flyer design</p>
-                <h3>Peak Fitness Challenge</h3>
-                <p>A bold promotional flyer concept designed for social posts, printed handouts, and local campaign announcements.</p>
-                <div class="mockup-meta">
-                  <span>Concept project</span>
-                  <span>Fitness promo</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="mockup-card reveal">
-              <div class="mockup-preview identity-preview">
-                <div class="identity-card">
-                  <div class="oak-logo" aria-hidden="true">
-                    <span class="oak-roof"></span>
-                    <span class="oak-beam"></span>
-                    <span class="oak-foundation"></span>
-                  </div>
-                  <strong>Oak & Iron Co.</strong>
-                  <small>Renovation / Repair / Build</small>
-                </div>
-                <div class="brand-board">
-                  <span></span>
-                  <span></span>
-                  <div class="palette-row">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                  </div>
-                </div>
-              </div>
-              <div class="mockup-content">
-                <p class="tag">Logo systems</p>
-                <h3>Oak & Iron Co.</h3>
-                <p>A compact identity concept with a mark, color palette, and brand-card direction for a repair or renovation business.</p>
-                <div class="mockup-meta">
-                  <span>Concept project</span>
-                  <span>Logo identity</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="process reveal" id="process">
-          <div class="section-heading">
-            <p class="eyebrow">Simple workflow</p>
-            <h2>A clear path from idea to launch.</h2>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <span>01</span>
-              <h3>Discovery</h3>
-              <p>Define the business goal, audience, services, and visual tone.</p>
+              <img
+                src="assets/work/findthemdm/home-desktop.webp"
+                width="2880"
+                height="1800"
+                alt="Find Them DM homepage: a green and yellow directory of missing-person alerts for Dominica with a search bar and list of active cases"
+              />
             </div>
-            <div class="timeline-item">
-              <span>02</span>
-              <h3>Concept</h3>
-              <p>Create mockups, layout direction, and color choices before build-out.</p>
-            </div>
-            <div class="timeline-item">
-              <span>03</span>
-              <h3>Build</h3>
-              <p>Turn the chosen direction into responsive pages and polished assets.</p>
-            </div>
-            <div class="timeline-item">
-              <span>04</span>
-              <h3>Launch</h3>
-              <p>Review, refine, and prepare the final files for hosting or sharing.</p>
-            </div>
-          </div>
-        </section>
+            <span class="hero-tag">
+              <small>Latest build</small>
+              Find Them DM, a missing-persons platform for Dominica
+            </span>
+          </a>
+        </div>
+      </section>
 
-        <section class="contact reveal" id="contact">
-          <div class="contact-copy">
-            <p class="eyebrow">Start a project</p>
-            <h2>Need a website, logo, flyer, or refresh?</h2>
-            <p>
-              Send a few details about what you need and I will follow up with
-              the next steps, timeline, and what information is needed to begin.
+      <!-- Problem / restoration -->
+      <section class="section restore" id="restoration">
+        <div class="wrap restore-grid">
+          <div class="restore-intro">
+            <p class="eyebrow">Website restoration</p>
+            <h2>An outdated website quietly sends customers to your competitors.</h2>
+            <p class="section-lede">
+              Most visitors decide in a few seconds. If your site is slow, hard to read on a phone,
+              or doesn't say what you do, they leave. A restoration keeps what works and fixes the rest.
             </p>
-            <div class="contact-links" aria-label="Contact options">
-              <a href="mailto:shane.st.louis@hotmail.com">shane.st.louis@hotmail.com</a>
-              <button type="button" data-copy-phone>+1 767 265 5905 <span>Copy number</span></button>
-              <a href="https://wa.me/17672655905" target="_blank" rel="noreferrer">Message on WhatsApp</a>
+          </div>
+          <ul class="checklist">
+              <li><strong>Breaks or squashes on phones</strong> — rebuilt mobile-first.</li>
+              <li><strong>Slow to load</strong> — lighter pages, optimised images.</li>
+              <li><strong>Out-of-date info</strong> — fresh copy, prices, hours and photos.</li>
+              <li><strong>No clear next step</strong> — obvious call, WhatsApp and booking buttons.</li>
+              <li><strong>Invisible on Google</strong> — proper titles, descriptions and business details.</li>
+          </ul>
+
+          <figure class="compare" data-compare style="--pos: 0%">
+            <div class="compare-stage">
+              <div class="compare-pane compare-before">
+                <img draggable="false" src="assets/work/restoration/before.webp" width="2560" height="1600" alt="The old ClearCoat Auto Care website: a scrolling yellow banner, Comic Sans header, broken image, 'call us for prices' and an under-construction notice" />
+              </div>
+              <div class="compare-pane compare-after">
+                <img draggable="false" src="assets/work/restoration/after.webp" width="2560" height="1600" alt="The restored ClearCoat website: a dark modern page with the headline 'Showroom shine, at your door', Book online and WhatsApp buttons, a 4.9 star rating and a studio photo of a car being polished" />
+              </div>
+              <button class="compare-label compare-label-before" type="button" data-show="100" aria-pressed="false">Before</button>
+              <button class="compare-label compare-label-after" type="button" data-show="0" aria-pressed="true">After</button>
+              <div class="compare-handle" aria-hidden="true"></div>
+              <div class="compare-knob" aria-hidden="true">⟷</div>
+              <input
+                class="compare-range"
+                type="range"
+                min="0"
+                max="100"
+                step="0.1"
+                value="0"
+                aria-label="Drag to compare the site before and after restoration"
+              />
             </div>
+            <figcaption>
+              <ul class="compare-notes">
+                <li><b>A headline that says what you do</b>, not "Welcome!!"</li>
+                <li><b>Book and WhatsApp buttons up top</b>, not buried on a contact page.</li>
+                <li><b>Reviews and next availability</b> to build trust in seconds.</li>
+                <li><b>Prices on the site</b>, so nobody has to call to ask.</li>
+              </ul>
+              <p class="compare-links">
+                <a href="concepts/clearcoat/index.html">Explore the restored site <span aria-hidden="true">→</span></a>
+                <a href="concepts/clearcoat/before.html">See the old one</a>
+              </p>
+              <span>Drag to compare. A restoration concept for a fictional detailing business.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Featured work -->
+      <section class="section work" id="work">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Featured work</p>
+            <h2>Find Them DM</h2>
+            <p class="section-lede">
+              A missing-persons alert platform for the Commonwealth of Dominica. Public alerts used to
+              scatter across social media and disappear from feeds. Find Them DM keeps every case in one
+              searchable place, with a secure back office for the people running it.
+            </p>
+          </div>
+
+          <div class="case">
+            <div class="case-shots">
+              <figure class="case-shot case-shot-main">
+                <img
+                  src="assets/work/findthemdm/directory-desktop.webp"
+                  width="2880"
+                  height="2200"
+                  loading="lazy"
+                  alt="Find Them DM directory page with search, filters by alert type and parish, and tabs for missing, located and closed cases"
+                />
+              </figure>
+              <figure class="case-shot case-shot-float">
+                <img
+                  src="assets/work/findthemdm/case-desktop.webp"
+                  width="2880"
+                  height="2000"
+                  loading="lazy"
+                  alt="A fictional sample case page showing last-seen location, details, and share buttons for WhatsApp, Facebook and X"
+                />
+              </figure>
+            </div>
+
+            <div class="case-detail">
+              <dl class="case-facts">
+                <div><dt>Type</dt><dd>Public website + staff portal</dd></div>
+                <div><dt>Role</dt><dd>Design, development, deployment</dd></div>
+                <div><dt>Built with</dt><dd>Django, PostgreSQL, Docker</dd></div>
+              </dl>
+
+              <ul class="feature-list">
+                <li>
+                  <h3>Search that works on any phone</h3>
+                  <p>Search by name, nickname or community. Filter by alert type, parish and date.</p>
+                </li>
+                <li>
+                  <h3>Made to be shared</h3>
+                  <p>One-tap WhatsApp and Facebook sharing, printable posters with a QR code, and RSS feeds for news outlets.</p>
+                </li>
+                <li>
+                  <h3>Review before anything goes public</h3>
+                  <p>Staff draft, review, approve and publish, with two-factor sign-in and a full audit trail.</p>
+                </li>
+                <li>
+                  <h3>Ready to hand over</h3>
+                  <p>Name, logo, colours and contacts are settings, so an agency can adopt it without code changes.</p>
+                </li>
+              </ul>
+
+              <a class="button" href="work/findthemdm.html">Read the case study <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concepts -->
+      <section class="section concepts" id="concepts">
+        <div class="wrap">
+          <div class="section-head section-head-row">
+            <div>
+              <p class="eyebrow">Concepts</p>
+              <h2>Click around. These are real, working websites.</h2>
+            </div>
+            <p class="section-note">
+              Full demo sites for fictional local businesses. Open one on your phone and try the menu, booking or estimate form.
+            </p>
+          </div>
+
+          <div class="concept-grid">
+            <article class="concept">
+              <a class="concept-media" href="concepts/hearth-table/index.html" aria-label="Open the Hearth &amp; Table live demo">
+                <span class="concept-desktop">
+                  <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <img src="assets/work/concepts/hearth-table-desktop.webp" width="2880" height="1800" loading="lazy" alt="Hearth and Table restaurant homepage with a headline about grandma's recipes beside a plated salad" />
+                </span>
+                <span class="concept-phone">
+                  <img src="assets/work/concepts/hearth-table-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                </span>
+              </a>
+              <div class="concept-body">
+                <p class="concept-kind">Restaurant · Roseau</p>
+                <h3>Hearth &amp; Table</h3>
+                <p>A warm, editorial site for a family Creole kitchen. The menu is the star, with ordering and table booking one tap away on phones.</p>
+                <ul class="concept-feats"><li>Tabbed menu with prices</li><li>Live "open now" hours</li><li>Sticky order bar on mobile</li></ul>
+                <a class="concept-link" href="concepts/hearth-table/index.html">View live demo <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="concept">
+              <a class="concept-media" href="concepts/riverstone/index.html" aria-label="Open the Riverstone Cottages live demo">
+                <span class="concept-desktop">
+                  <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <img src="assets/work/concepts/riverstone-desktop.webp" width="2880" height="1800" loading="lazy" alt="Riverstone Cottages homepage with a rainforest waterfall photo and a booking bar" />
+                </span>
+                <span class="concept-phone">
+                  <img src="assets/work/concepts/riverstone-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                </span>
+              </a>
+              <div class="concept-body">
+                <p class="concept-kind">Guesthouse · Roseau Valley</p>
+                <h3>Riverstone Cottages</h3>
+                <p>A calm, photo-led site that sells the setting and pushes direct bookings, so fewer fees go to booking platforms.</p>
+                <ul class="concept-feats"><li>Date picker with live price</li><li>Cottage comparison</li><li>Getting-here FAQ</li></ul>
+                <a class="concept-link" href="concepts/riverstone/index.html">View live demo <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="concept">
+              <a class="concept-media" href="concepts/peak-fitness/index.html" aria-label="Open the Peak Fitness live demo">
+                <span class="concept-desktop">
+                  <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <img src="assets/work/concepts/peak-fitness-desktop.webp" width="2880" height="1800" loading="lazy" alt="Peak Fitness homepage with a bold headline reading Stronger in 6 weeks and a countdown timer" />
+                </span>
+                <span class="concept-phone">
+                  <img src="assets/work/concepts/peak-fitness-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                </span>
+              </a>
+              <div class="concept-body">
+                <p class="concept-kind">Gym · Roseau</p>
+                <h3>Peak Fitness</h3>
+                <p>A loud, high-energy site built around one campaign: fill the six-week challenge before the countdown hits zero.</p>
+                <ul class="concept-feats"><li>Live countdown</li><li>Day-by-day class timetable</li><li>Free-trial sign-up</li></ul>
+                <a class="concept-link" href="concepts/peak-fitness/index.html">View live demo <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+
+            <article class="concept">
+              <a class="concept-media" href="concepts/oak-iron/index.html" aria-label="Open the Oak &amp; Iron Co. live demo">
+                <span class="concept-desktop">
+                  <span class="concept-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                  <img src="assets/work/concepts/oak-iron-desktop.webp" width="2880" height="1800" loading="lazy" alt="Oak and Iron Co. homepage with the headline Built right, built to last, beside a renovated kitchen" />
+                </span>
+                <span class="concept-phone">
+                  <img src="assets/work/concepts/oak-iron-mobile.webp" width="1170" height="2532" loading="lazy" alt="" />
+                </span>
+              </a>
+              <div class="concept-body">
+                <p class="concept-kind">Contractor · Island-wide</p>
+                <h3>Oak &amp; Iron Co.</h3>
+                <p>A no-nonsense site that earns trust fast, with proof up front and an estimate form that takes under a minute.</p>
+                <ul class="concept-feats"><li>3-step estimate form</li><li>Project gallery</li><li>Trust stats bar</li></ul>
+                <a class="concept-link" href="concepts/oak-iron/index.html">View live demo <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="section services" id="services">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Services</p>
+            <h2>Everything your business needs to look the part online.</h2>
+          </div>
+
+          <div class="service-grid">
+            <article class="service service-feature">
+              <span class="service-num">01</span>
+              <h3>New websites</h3>
+              <p>
+                A site built around what your customers need to know and do: see your services,
+                trust you, and contact or book you. Designed for phones first.
+              </p>
+              <ul>
+                <li>Business and service sites</li>
+                <li>Restaurant, tourism and guesthouse sites</li>
+                <li>Landing pages for campaigns and launches</li>
+              </ul>
+            </article>
+            <article class="service service-feature">
+              <span class="service-num">02</span>
+              <h3>Website restoration</h3>
+              <p>
+                Already have a site that's slow, broken or dated? I'll keep your domain and what's working,
+                and rebuild the rest so it looks current and performs.
+              </p>
+              <ul>
+                <li>Mobile and speed fixes</li>
+                <li>Redesign with refreshed content</li>
+                <li>Moving off expensive or abandoned platforms</li>
+              </ul>
+            </article>
+            <article class="service">
+              <span class="service-num">03</span>
+              <h3>Web apps &amp; portals</h3>
+              <p>Directories, booking systems and staff dashboards, like Find Them DM, when a brochure site isn't enough.</p>
+            </article>
+            <article class="service">
+              <span class="service-num">04</span>
+              <h3>Care &amp; updates</h3>
+              <p>Hosting setup, backups, and content changes when your hours, prices or menu change.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Packages -->
+      <section class="section packages" id="packages">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">Packages</p>
+            <h2>Clear scope. Fixed quote. No surprises.</h2>
+            <p class="section-lede">
+              Every project starts with a free call and a written quote, so you know exactly what you're getting
+              and what it costs before anything begins.
+            </p>
+          </div>
+
+          <div class="package-grid">
+            <article class="package">
+              <h3>Starter</h3>
+              <p class="package-for">For new businesses that need to be found and look credible.</p>
+              <ul>
+                <li>One-page website</li>
+                <li>Mobile-first design</li>
+                <li>Call, WhatsApp and contact form</li>
+                <li>Google-ready setup</li>
+                <li>Launch on your domain</li>
+              </ul>
+              <a class="button button-ghost" href="#contact" data-package="Starter website">Get a quote</a>
+            </article>
+
+            <article class="package package-pop">
+              <span class="package-badge">Most popular</span>
+              <h3>Business</h3>
+              <p class="package-for">For established businesses ready to replace or restore their site.</p>
+              <ul>
+                <li>Up to 6 pages</li>
+                <li>Copywriting help</li>
+                <li>Booking, menu or gallery</li>
+                <li>Speed and SEO basics</li>
+                <li>Analytics so you see results</li>
+                <li>30 days of free tweaks</li>
+              </ul>
+              <a class="button" href="#contact" data-package="Business website">Get a quote</a>
+            </article>
+
+            <article class="package">
+              <h3>Custom build</h3>
+              <p class="package-for">For organisations that need logins, records or workflows.</p>
+              <ul>
+                <li>Web apps and portals</li>
+                <li>Staff accounts and roles</li>
+                <li>Databases and search</li>
+                <li>Secure hosting</li>
+                <li>Documentation and handover</li>
+              </ul>
+              <a class="button button-ghost" href="#contact" data-package="Custom build">Talk it through</a>
+            </article>
+          </div>
+          <p class="package-addon">
+            <b>Need a logo too?</b> Add a simple logo and colour palette to any package, so your site, signs and socials all match.
+          </p>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="section process" id="process">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="eyebrow">How it works</p>
+            <h2>From first message to live site.</h2>
+          </div>
+
+          <ol class="steps">
+            <li>
+              <span class="step-num">1</span>
+              <h3>Free review &amp; call</h3>
+              <p>Tell me about your business. If you have a site, I'll send back what's holding it back.</p>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <h3>Quote &amp; plan</h3>
+              <p>A written scope, price and timeline. Nothing starts until you're happy with it.</p>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <h3>Design &amp; build</h3>
+              <p>You see the design early and give feedback before it's built out and tested on real phones.</p>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <h3>Launch &amp; support</h3>
+              <p>Your site goes live on your domain, and I show you how to keep it up to date.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq" id="faq">
+        <div class="wrap faq-grid">
+          <div class="section-head">
+            <p class="eyebrow">FAQ</p>
+            <h2>Questions people usually ask.</h2>
+            <p class="section-lede">Something else on your mind? <a href="https://wa.me/17672655905" target="_blank" rel="noreferrer">Ask on WhatsApp.</a></p>
+          </div>
+
+          <div class="faq-list">
+            <details>
+              <summary>How much does a website cost?</summary>
+              <p>It depends on the number of pages and features. After a short call you'll get a fixed written quote, and that's the price. No hourly billing surprises.</p>
+            </details>
+            <details>
+              <summary>How long does it take?</summary>
+              <p>A Starter site is usually ready in one to two weeks. Larger sites and restorations take longer, mostly depending on how quickly content and feedback come in. You'll get a timeline with your quote.</p>
+            </details>
+            <details>
+              <summary>Can you fix my existing website instead of starting over?</summary>
+              <p>Often, yes. That's what a restoration is. I'll review your current site first and tell you honestly whether a fix or a rebuild gives you more for your money.</p>
+            </details>
+            <details>
+              <summary>Do I own the website?</summary>
+              <p>Yes. Your domain, your content and your site files are yours. If you ever want to move on, you take everything with you.</p>
+            </details>
+            <details>
+              <summary>I don't have photos or text ready. Is that a problem?</summary>
+              <p>Not at all. I can help write your content and use quality stock photography until you have your own.</p>
+            </details>
+            <details>
+              <summary>Do you only work with businesses in Dominica?</summary>
+              <p>No. I'm based in Dominica, and I work with clients anywhere over email, WhatsApp and video calls.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section contact" id="contact">
+        <div class="wrap contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow">Free website review</p>
+            <h2>Let's see what your website could be doing for you.</h2>
+            <p>
+              Send your current site (if you have one) and a few lines about your business.
+              Within 24 hours you'll get honest feedback and suggested next steps. No obligation.
+            </p>
+            <ul class="contact-links">
+              <li>
+                <a href="https://wa.me/17672655905" target="_blank" rel="noreferrer">
+                  <span class="contact-label">WhatsApp</span>
+                  Message me directly
+                </a>
+              </li>
+              <li>
+                <a href="mailto:shane.st.louis@hotmail.com">
+                  <span class="contact-label">Email</span>
+                  shane.st.louis@hotmail.com
+                </a>
+              </li>
+              <li>
+                <button type="button" data-copy-phone>
+                  <span class="contact-label">Phone</span>
+                  +1 767 265 5905 <small data-copy-status>Copy</small>
+                </button>
+              </li>
+            </ul>
           </div>
 
           <form
@@ -299,38 +559,65 @@
             <input type="hidden" name="_subject" value="New project inquiry from Morne Studio" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://shanest09.github.io/mornestudio/" />
+            <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="field-row">
+              <label>
+                Name
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+            </div>
             <label>
-              Name
-              <input type="text" name="name" autocomplete="name" required />
+              Business name
+              <input type="text" name="business" autocomplete="organization" />
             </label>
             <label>
-              Your email
-              <input type="email" name="email" autocomplete="email" required />
+              <span>Current website <span class="optional">(if you have one)</span></span>
+              <input type="url" name="current_website" placeholder="https://" inputmode="url" />
             </label>
             <label>
-              Project type
-              <select name="project_type" required>
-                <option value="">Select one</option>
-                <option>Website creation</option>
+              What do you need?
+              <select name="project_type" required data-project-type>
+                <option value="">Choose one</option>
+                <option>New website</option>
                 <option>Website restoration</option>
-                <option>Flyer or promo design</option>
-                <option>Logo or brand design</option>
+                <option>Starter website</option>
+                <option>Business website</option>
+                <option>Custom build</option>
                 <option>Not sure yet</option>
               </select>
             </label>
             <label>
-              Project details
-              <textarea name="message" rows="5" placeholder="Tell me what you need, your business type, and any deadline." required></textarea>
+              Tell me a bit more
+              <textarea name="message" rows="4" placeholder="What does your business do, and what should the website help with? Any deadline?" required></textarea>
             </label>
-            <button class="button button-primary" type="submit">Send project inquiry</button>
+            <button class="button button-block" type="submit">Send — get my free review</button>
+            <p class="form-note">I reply within 24 hours. Your details are only used to answer you.</p>
           </form>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
 
-      <button class="back-to-top" type="button" data-back-to-top aria-label="Back to top">
-        ↑
-      </button>
-    </div>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <a class="brand brand-footer" href="#top">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <path d="M4 38L18 16L30 38H4Z" fill="currentColor" opacity=".45" />
+            <path d="M14 38L31 10L45 38H14Z" fill="currentColor" />
+            <path d="M31 10L36 38H45L31 10Z" fill="var(--accent)" />
+          </svg>
+          <span>Morne Studio</span>
+        </a>
+        <p>Website creation &amp; restoration by Shane St. Louis. Built in Dominica.</p>
+        <p class="footer-year">© <span data-year>2026</span> Morne Studio</p>
+      </div>
+    </footer>
+
+    <a class="mobile-cta" href="#contact">Get a free website review</a>
 
     <script src="script.js"></script>
   </body>

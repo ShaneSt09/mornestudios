@@ -1,12 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="morneGradient" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#42f5ff"/>
-      <stop offset="1" stop-color="#1f7aff"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="#02040b"/>
-  <path d="M8 46L25 20L40 46H8Z" fill="#0b1b33" stroke="#42f5ff" stroke-width="3" stroke-linejoin="round"/>
-  <path d="M22 46L39 15L56 46H22Z" fill="url(#morneGradient)" stroke="#f5fbff" stroke-width="2.5" stroke-linejoin="round"/>
-  <path d="M39 15L47 46H56L39 15Z" fill="#07111f" opacity=".42"/>
+  <rect width="64" height="64" rx="16" fill="#14231c"/>
+  <path d="M6 48L24 20L39 48H6Z" fill="#f5f2ea" opacity=".45"/>
+  <path d="M19 48L41 13L58 48H19Z" fill="#f5f2ea"/>
+  <path d="M41 13L47 48H58L41 13Z" fill="#ff5b2e"/>
 </svg>
