@@ -1,4 +1,4 @@
-# Launching Morne Studio on Cloudflare
+# Launching Morne Studios on Cloudflare
 
 The site is plain HTML/CSS/JS served as static assets by Cloudflare Workers
 (`wrangler.jsonc`). There is no build step. Files listed in `.assetsignore`

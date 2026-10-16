@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shanest09.github.io/mornestudio/sitemap.xml
+Sitemap: https://mornestudios.com/sitemap.xml

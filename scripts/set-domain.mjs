@@ -1,7 +1,7 @@
 // Switch every absolute site URL (canonical tags, link previews, sitemap,
 // robots.txt, the contact form's redirect) to a new address.
 //
-//   node scripts/set-domain.mjs https://mornestudio.dm
+//   node scripts/set-domain.mjs https://mornestudios.com
 //
 // The current address lives in site.config.json and is updated too.
 
