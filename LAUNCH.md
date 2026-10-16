@@ -41,8 +41,8 @@ confirm it.
 - [ ] Add the site in Google Search Console and submit `/sitemap.xml`.
 - [ ] Create a Google Business Profile and link the site.
 - [ ] In Google Analytics, mark `generate_lead` as a key event.
-- [ ] Turn off GitHub Pages (repo **Settings → Pages**) and delete
-      `.github/workflows/static.yml` once the domain works, so there is one live copy.
+- [ ] Turn off GitHub Pages (repo **Settings → Pages**) so there is one live copy.
+      (The Pages workflow was removed on 2026-10-16.)
 
 ## Analytics events
 
