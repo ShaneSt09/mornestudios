@@ -29,10 +29,16 @@ The site is plain HTML/CSS/JS served as static assets by Cloudflare Workers
 
 ## 3. Email
 
-Set up `hello@your-domain.com` (Zoho Mail free plan, or Google Workspace),
-then replace `shane.st.louis@hotmail.com` in `index.html`, `privacy.html` and
-the form's `action` URL. FormSubmit will email the new address once to
-confirm it.
+`hello@mornestudios.com` is set up (2026-10-16):
+
+- **Receiving:** Cloudflare Email Routing forwards it to the business Gmail.
+- **Sending:** Gmail "Send mail as" through Brevo's SMTP relay
+  (`smtp-relay.brevo.com`), so mail is signed as mornestudios.com.
+- **DNS:** SPF, DMARC (`p=none`), Brevo DKIM and the `em.` branded
+  subdomain are in Cloudflare DNS.
+
+The site and contact form use hello@. FormSubmit emails that address once to
+confirm it after the first enquiry.
 
 ## 4. Before announcing
 
